@@ -22,9 +22,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use("/register", require("./routes/users"));
-app.use("/login", require("./routes/auth"));
-app.use("/todos", require("./routes/todos"));
+app.use("/api/register", require("./routes/users"));
+app.use("/api/login", require("./routes/auth"));
+app.use("/api/todos", require("./routes/todos"));
 
 const PORT = process.env.PORT || 5000;
 

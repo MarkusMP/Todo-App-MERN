@@ -11,7 +11,7 @@ const TodoList = () => {
 
   const fetchTodos = useCallback(async () => {
     try {
-      const { data } = await axios.get(`/todos/${state.auth.userId}`, {
+      const { data } = await axios.get(`/api/todos/${state.auth.userId}`, {
         headers: {
           "auth-token": state.auth.jwt,
         },
@@ -29,7 +29,7 @@ const TodoList = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "/todos/create",
+        "/api/todos/create",
         {
           id: state.auth.userId,
           todo: { title: title },
