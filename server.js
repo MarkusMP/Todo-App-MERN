@@ -9,7 +9,7 @@ db();
 app.use(cors());
 app.use(express.json({ extended: false }));
 
-const __dirname = path.resolve();
+var __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 if (process.env.NODE_ENV === "production") {
