@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "client": "cd client && npm start",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\""
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start -prefix client"
   },
   "author": "Markus Persson",
   "license": "ISC",
