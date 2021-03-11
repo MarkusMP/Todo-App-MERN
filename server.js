@@ -2,10 +2,13 @@ const express = require("express");
 const db = require("./config/db");
 const app = express();
 const path = require("path");
+const cors = require("cors");
 
 db();
 
 app.use(express.json({ extended: false }));
+
+app.use(cors());
 
 var __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
