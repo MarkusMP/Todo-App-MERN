@@ -5,7 +5,7 @@ import axios from "axios";
 const Todo = ({ data, id, fetchTodos, jwt, key }) => {
   const deleteTodoHandler = async () => {
     try {
-      await axios.delete(`http://localhost:5000/todos/delete`, {
+      await axios.delete(`/todos/delete`, {
         headers: {
           "auth-token": jwt,
         },
@@ -27,7 +27,7 @@ const Todo = ({ data, id, fetchTodos, jwt, key }) => {
     if (editTodo === null || editTodo === "") return;
     try {
       await axios.put(
-        "http://localhost:5000/todos/update",
+        "/todos/update",
         {
           todoid: data.id,
           title: editTodo,

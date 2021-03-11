@@ -11,14 +11,11 @@ const TodoList = () => {
 
   const fetchTodos = useCallback(async () => {
     try {
-      const { data } = await axios.get(
-        `http://localhost:5000/todos/${state.auth.userId}`,
-        {
-          headers: {
-            "auth-token": state.auth.jwt,
-          },
-        }
-      );
+      const { data } = await axios.get(`/todos/${state.auth.userId}`, {
+        headers: {
+          "auth-token": state.auth.jwt,
+        },
+      });
       dispatch({
         type: "FETCH_TODOS",
         payload: data.todos,
@@ -32,7 +29,7 @@ const TodoList = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/todos/create",
+        "/todos/create",
         {
           id: state.auth.userId,
           todo: { title: title },
