@@ -1,12 +1,10 @@
 const express = require("express");
 const db = require("./config/db");
 const app = express();
-const cors = require("cors");
 const path = require("path");
 
 db();
 
-app.use(cors());
 app.use(express.json({ extended: false }));
 
 var __dirname = path.resolve();
