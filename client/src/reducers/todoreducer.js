@@ -2,7 +2,7 @@ const initialState = {
   todos: [],
 };
 
-const todo = (state = initialState, action) => {
+const todo = (state = { todos: [] }, action) => {
   switch (action.type) {
     case "FETCH_TODOS":
       return {
