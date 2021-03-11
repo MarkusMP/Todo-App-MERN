@@ -13,10 +13,18 @@ const Login = () => {
   const loginHandler = async (e) => {
     e.preventDefault();
     try {
-      const login = await axios.post("/api/login", {
-        email,
-        password,
-      });
+      const login = await axios.post(
+        "/api/login",
+        {
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       dispatch({
         type: "FETCH_DATA",
         payload: login.data,

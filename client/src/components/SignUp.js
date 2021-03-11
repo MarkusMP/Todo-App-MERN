@@ -13,10 +13,18 @@ const SignUp = () => {
   const registerHandler = async (e) => {
     e.preventDefault();
     try {
-      const register = await axios.post("/api/register", {
-        email,
-        password,
-      });
+      const register = await axios.post(
+        "/api/register",
+        {
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       dispatch({
         type: "FETCH_DATA",
         payload: register.data,
