@@ -1,0 +1,5 @@
+{
+  "mongoDB": "mongodb+srv://Markus:Kusina04@cluster0.r3ohi.mongodb.net/Cluster0?retryWrites=true&w=majority",
+  "jwtSecret": "heioehjnfwp63mbl123miehip34jt3h",
+  "jwtRefresh": "fihpwafiu-32ji2h3flgjegoiej"
+}
