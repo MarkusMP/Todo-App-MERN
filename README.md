@@ -9,4 +9,5 @@ This was build with
     <li>Express</li>
       <li>MongoDB</li>
           <li>React</li>
+            <li>Redux</li>
  </ul>
